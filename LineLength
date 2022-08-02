@@ -1,0 +1,25 @@
+f(x) = ...
+f(x).upper = f(x + 𝛿y) = f(x) - 𝛿x
+f(x).lower = f(x - 𝛿y) = f(x) + 𝛿x
+f(x).delta = f(x).upper - f(x).lower = f(x + 𝛿y) - f(x - 𝛿y) = (f(x) - 𝛿x) - (f(x) + 𝛿x)
+f(x + 𝛿y) = f(x) + 𝛿y * 𝛿y/𝛿x
+f(x).delta = (f(x) + (𝛿y * 𝛿y/𝛿x)) - (f(x) - (𝛿y * 𝛿y/𝛿x))) = -2𝛿x
+
+(𝛿y^2 + 𝛿x^2) = 𝛿t^2
+
+tangent-deltas:{
+	Δx = 𝛿t * 𝛿y / (𝛿y^2 + 𝛿x^2)^.5
+	Δy = 𝛿t * 𝛿x / (𝛿y^2 + 𝛿x^2)^.5
+}
+
+u(x - Δx) = f(x) + Δy
+l(x + Δx) = f(x) - Δy
+u(x - (Δx/𝛿x) * 𝛿x) = u(x) - Δx * u'(x) = f(x) + Δy
+l(x + (Δx/𝛿x) * 𝛿x) = l(x) + Δx * l'(x) = f(x) - Δy
+u(x) = f(x) + Δy + Δx * u'(x)
+l(x) = f(x) - Δy + Δx * l'(x)
+
+u(x) - l(x) = (Δy + Δx * u'(x)) + (Δy + Δx * l'(x)) = 2 * Δy + Δx * (u'(x) + l'(x))
+
+u'(x) = f'(x
+
